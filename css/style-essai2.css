@@ -1,0 +1,95 @@
+/* Import ROBOTO SLAB 300 et 600*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap');
+
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+
+
+/* container doit gérer juste la dimension et le placement*/
+.container {
+    width: 1000px;
+    margin: 0 auto; /* permet de centrer le container*/
+}
+
+
+
+nav {    
+    background:#eeeeee;
+}
+
+nav .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    
+    color: crimson;
+    padding: 5px; /* permet d'élargir la zone clickable et espacer les liens*/    
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*pseudo classe hover: permet de changer la couleur des balises a quand on les survoles*/
+nav a:hover{
+    color: rgb(164, 16, 45);
+}
+
+header img {
+    width: 100%;
+}
+
+h2.title {
+    font-size: 1.5rem;
+    color:crimson;
+    font-weight: bold;
+    border-bottom: 4px solid orangered;
+    padding: 20px;
+}
+h2.title span {
+    color:orangered;
+}
+
+div.section-take-a-look{
+    background:#eeeeee;
+    padding: 20px;
+}
+div.section-nous-connaitre{
+    background:#eeeeee;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;    
+    padding: 20px 0 20px 0;
+}
+
+div.card {
+    width: 220px;
+    background: white;
+    padding: 5px;
+}
+
+div.card img{
+    width: 100%;
+}
+
+div.card  h3{
+    font-size: 1.7rem;
+    color:crimson;
+    text-align: center;    
+    font-weight: bold;
+    border-bottom: 3px solid;
+    padding: 10px;
+}
+
+div.card p {
+    line-height: 25px;
+    padding: 5px;
+    text-align: center;
+}
+
