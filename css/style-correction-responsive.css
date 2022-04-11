@@ -128,8 +128,7 @@ iframe {
 footer {
     background: rgb(84, 27, 84);
     color: white;    
-    padding: 40px;
-    
+    padding: 40px;    
 }
 
 footer ul{
@@ -155,4 +154,90 @@ footer li a:hover {
     padding: 0 15px ;
 }*/
 
+/* LES MEDIA QUERIES */
+/* 
+    Le but est de rendre l'interface responsive (en francais: adaptive)
+    - réécriture des regles css selon des points de rupture
+*/
+
+/* règle pour résolution <= 768px (type mobile) */
+@media screen and (max-width:768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        /* on met en border-box pour que les 100% avec les padding définit */
+        box-sizing: border-box;        
+    }
+   
+    .cards-container {
+        /* on dit qu'il faut passer à la ligne 
+        comme on a donné une taille 100% à la carte, on a aura une carte par ligne
+        j'aurai pu mettre 48% pour avoir 2 cartes par ligne*/
+       flex-wrap: wrap; 
+    }
+
+    /* on passe ne mode 1 colonne , ie card fait 100%*/
+    .card {
+        width: 100%; /* on dit que les cartes font 100%*/        
+        box-sizing: border-box; 
+        /* le border box n'inclue pas le margin, du coup on verra bien les marges*/
+        margin-bottom: 20px;
+    }
+
+
+    div.presentation {
+        flex-wrap: wrap;
+    }
+
+    div.presentation .text,  div.presentation .video{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/*
+comme notre box était définie à 1000px, on doit 
+gérer un autre braking point pour les résoution entre notre 1er braking point et l'affichage au dela de 1000px.
+On va se coller aux résolution standard, on va aller jusqu'à 1024 px
+
+C'est résolution type tablette
+*/
+@media screen and (min-width:769px) and  (max-width:1024px) {
+    /* on a copier coller les memes règles que pour le braking point précédent */
+    .container {
+        width: 100%;
+        padding: 10px;
+        /* on met en border-box pour que les 100% avec les padding définit */
+        box-sizing: border-box;        
+    }
+   
+    .cards-container {
+        /* on dit qu'il faut passer à la ligne 
+        comme on a donné une taille 100% à la carte, on a aura une carte par ligne
+        j'aurai pu mettre 48% pour avoir 2 cartes par ligne*/
+       flex-wrap: wrap; 
+    }
+
+    /* on passe ne mode 2 colonne , ie card fait 48% comme ca le flex nous met une margin au centre*/
+    .card {
+        width: 48%; /* on dit que les cartes font 100%*/
+        /* avec border-box on indique que c'est l'ensemble de la box qui fait les  48%. Ca inclue padding, ... 
+        sinon, ca fonctionnera mal si on diminue de qq px la résolution*/
+        box-sizing: border-box; 
+        /* le border box n'inclue pas le margin, du coup on verra bien les marges*/
+        margin-bottom: 20px;
+    }
+
+
+    div.presentation {
+        flex-wrap: wrap;
+    }
+
+    div.presentation .text,  div.presentation .video{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 
