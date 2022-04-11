@@ -123,11 +123,12 @@ iframe {
     width: 100%;
 }
 
+
+/* FOOTER */
 footer {
     background: rgb(84, 27, 84);
     color: white;    
-    padding: 40px;
-    text-align: center;
+    padding: 40px;    
 }
 
 footer ul{
