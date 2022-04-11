@@ -23,7 +23,16 @@
         <div class="container">
             <div class="navbar">
                 <h1><img src="/img/logo.png" alt="Red wold"></h1>
-                <div>
+                
+                <!--burger button pour menu mobile-->
+                <button class="burger-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="links">
+                    <button class="close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                     <a href="#">Concept</a>
                     <a href="#">Products</a>
                     <a href="#">Price</a>
@@ -127,6 +136,29 @@
             </ul>
         </div>
     </footer>
+
+
+    <!-- on met le script à la fin car il faut que les éléments référencé de la page soient chargés-->
+    <script>
+    	// une interaction
+        // 1 savoir cibler des elmts HTML / on récupere des objets 
+        // 2 savoir modifier le DOM (texte, html, class CSS, style CSS)
+        // 3 savoir détecter des evenements (mouse, keyboard, micro, camera, DOMCOntentLoaded)
+
+        // 1 Selectionner les elts
+        let buttonElt = document.querySelector('button.burger-btn');        
+        let menuElt = document.querySelector('div.links');
+        let buttonEltClose = document.querySelector('button.close');
+
+        // 3 Detecter l'event click, dblick, contextmenu 
+        buttonElt.addEventListener('click', function() {
+            menuElt.style.transform = 'translate(0,0)'
+        });
+        buttonEltClose.addEventListener('click', function() {
+            menuElt.style.transform = 'translate(300px,0)'
+        });
+
+    </script>
 
 </body>
 
